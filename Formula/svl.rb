@@ -5,23 +5,23 @@
 class Svl < Formula
   desc "SVNLab command line, with the gateway and CI runner services"
   homepage "https://pkg.svnlab.dev"
-  version "0.9.2"
+  version "0.9.3"
   license "Proprietary"
 
   depends_on "subversion"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://pkg.svnlab.dev/downloads/0.9.2/svl_0.9.2_darwin_amd64.tar.gz"
-      sha256 "8a8b8f67630c5d3b11667d2ff4afc930ec1ccf7bf3ea94a52d275ea229672061"
+      url "https://pkg.svnlab.dev/downloads/0.9.3/svl_0.9.3_darwin_amd64.tar.gz"
+      sha256 "2a2cbacc1e8d9fd096ea86036d16b97423f48c87b46242a722519e6f617fa8a7"
 
       define_method(:install) do
         bin.install "svl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://pkg.svnlab.dev/downloads/0.9.2/svl_0.9.2_darwin_arm64.tar.gz"
-      sha256 "cd07d374b3753fb5d85e8f8a3bd1cb7ff4db5d6630e8a9700b2352d7c71e47bf"
+      url "https://pkg.svnlab.dev/downloads/0.9.3/svl_0.9.3_darwin_arm64.tar.gz"
+      sha256 "8346cf04166e688598639d014e56d5b846721ebca2a034ad006e887f90c60d6e"
 
       define_method(:install) do
         bin.install "svl"
@@ -31,15 +31,15 @@ class Svl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://pkg.svnlab.dev/downloads/0.9.2/svl_0.9.2_linux_amd64.tar.gz"
-      sha256 "becd970bd079120ebb5567a9c788749896ed471339b3b61223a457fa4d834536"
+      url "https://pkg.svnlab.dev/downloads/0.9.3/svl_0.9.3_linux_amd64.tar.gz"
+      sha256 "2765b76129807e9a57208e1ec8d862ce0ffead43f655864db1edbbdeb116e50c"
       define_method(:install) do
         bin.install "svl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://pkg.svnlab.dev/downloads/0.9.2/svl_0.9.2_linux_arm64.tar.gz"
-      sha256 "f78815202f4a187adc642be37e7540d3bb1a13a74b3d3ab6935d1346fd2dd0d8"
+      url "https://pkg.svnlab.dev/downloads/0.9.3/svl_0.9.3_linux_arm64.tar.gz"
+      sha256 "da961c118f4a0d09f183b0e93f59a73c48ce4f97e15b747ad3eee75eb15561da"
       define_method(:install) do
         bin.install "svl"
       end
